@@ -4,14 +4,14 @@
 		<title>MANUAL DE HTML5 Y CSS3</title>
 		<meta charset=UTF-8>
 		<meta name="author" content="Ignacio Vivas">
-		<link rel="stylesheet" type="text/css" href="estilos.css" />
+	<!--	<link rel="stylesheet" type="text/css" href="estilos.css" />   -->
 	</head>
 	<body>
 		<header>
 			<h1>MANUAL DE HTML5 Y CSS3</h1>
 		</header>
 		
-		<table>
+		<table border>
 			<tr> 
 			<td colspan=2><h1>Empezar el html</h1></tr>
 			<tr>
@@ -47,7 +47,7 @@
 				<td>- Contenido del documento. Solo puede haber un body en el documento
 			</tr>
 			
-			<tr><tr> 
+			<tr> 
 			<td colspan=2><h1>Titulos</h1></tr>
 			<tr>
 				<th>&lt;hn>&lt;/hn&gt;
@@ -58,6 +58,8 @@
 					</ul>
 				</td>
 			</tr>
+			<tr>
+			<td colspan=2><h1>Composición del body</h1></tr>
 			<tr>
 				<th>&lt;article&gt;&lt;/article&gt;
 				<td>- Composición independiente al documento
@@ -95,12 +97,15 @@
 				<td>- Información de contacto
 			</tr>
 			<tr>
+			<td colspan=2><h1>Listas</h1></tr>
+			
+			<tr>
 				<th>&lt;li&gt;&lt;/li&gt;
 				<td>- Lo usamos para poner cada elemento de las listas "ul" o "ol". li es un elemento vacío, así que no hace falta cerrarlo.
 			</tr>
 			<tr>
 				<th>&lt;ul&gt;&lt;/ul&gt;
-				<td>- Listas desordenadas. Puede darse los siguientes valores: (Si no ponemos nada sale por defecto dependiendo del anidamiento)
+				<td>- Listas desordenadas. Puede darse los siguientes valores añadiendo "type=" al li  (Si no ponemos nada sale por defecto dependiendo del anidamiento)
 					<ul>
 						<li type=disc>disc</li>
 						<li type=square>Square</li>
@@ -132,44 +137,147 @@
 				</td>
 			</tr>
 			<tr>
+			<td colspan=2><h1>Formato para textos</h1></tr>
+			<tr>
 				<th>&lt;hr&gt;
-				<td> línea horizontal
+				<td> línea horizontal <hr>
 			</tr>
 			<tr>
 				<th>&lt;i&gt;&lt;/i&gt;
-				<td><i>letra en cursiva</i>
+				<td><i>Letra en cursiva</i>
 			</tr>
 			<tr>
 				<th>&lt;b&gt;&lt;/b&gt;
-				<td><b>Negrita</b>
+				<td><b>Letra en Negrita</b>
 			</tr>
 			<tr>
 				<th>&lt;u&gt;&lt;/u&gt;
-				<td><u>subrrayado</u>
+				<td><u>Palabras o frases subrrayadas</u>
 			</tr>
 			<tr>
 				<th>&lt;br&gt;
-				<td>Salto de línea
+				<td>Salto de línea. Normalmente va al final de la frase
+			</tr>
+			<tr>
+				<th>&lt;wbr&gt;
+				<td>Salto de línea. La ponemos en cualquier sitio de la frase para que el navegador sepa que esa palabra es indivisible.
+			</tr>
+			<tr>
+				<th>&lt;EM&gt;&lt;/EM&gt;
+				<td><EM>Énfasis o recalca una parte del texto</EM>
 			</tr>
 			<tr>
 				<th>&lt;strong&gt;&lt;/strong&gt;
-				<td>Cosas importantes, serias, urgentes
-			</tr>
-			<tr>
-				<th>&lt;small&gt;&lt;/small&gt;
-				<td>
+				<td><strong>Cosas importantes, serias, urgentes</strong>
 			</tr>
 			
-				
-				
-
-
-
-
-
-
-
-
+			<tr>
+				<th>&lt;small&gt;&lt;/small&gt;
+				<td><small>Letra pequeña (como la de los contratos)</small>
+			</tr>
+			<tr>
+				<th>&lt;s&gt;&lt;/s&gt;
+				<td><s>Muestra contenido irrelevante u obsoleto</s>
+			</tr>
+			<tr>
+			<td colspan=2><h1>Enlaces</h1></tr>
+			<tr>
+				<th>&lt;a href&gt;&lt;/a&gt;
+				<td>Para especificar enlaces a archivos, páginas, etc... <a href="https://nvivas.github.io/prueba-marcas"> Visita mi página en Github</a><br>
+					Tenemos varios atributos para el "href" como:
+					<ul>
+						<li>download --> Especifica que descargará cuando hagamos click en el enlace (Ejemplo.pdf)</li>
+						<li>tarjet --> Especifica dónde queremos abrir el enlace</li>
+							<ul>
+								<li>_blank --> Se abre en una nueva ventana
+								<li>_self --> la página de destino a la que apunta en vínculo se mostrará en la misma ventana del navegador (por defecto)
+								<li>_parent --> se abre en la ventana que contiene el vinculo
+								<li>_top --> Se usa esta opción cuando queremos que el archivo enlazado se muestre en una pantalla completa de la ventana eliminando los frames o marcos si los hay
+							</ul>
+						<li>Hay mas atributos como el "rel", "media"...</li>
+					</ul>
+			</tr>
+			<tr>
+			<td colspan=2><h1>Imágenes</h1></tr>
+			<tr>
+				<th>&lt;img&gt;
+				<td>Esta etiqueta la usamos para insertar imágenes.
+				Tenemos varios atributos para img como:
+				<ul>
+					<li>src="foto.jpg" --> con src le diremos donde esta alojada la imagen que queremos poner en nuestro html</li>
+					<li>width="50" --> Ancho de la imagen</li>
+					<li>height="100" --> Alto de la imagen</li>
+					<li>alt --> Texto alternativo de la imagen</li>
+				</ul>
+				Las imagenes pueden ser de varios tipos
+				<ul>
+					<li>Bimap estáticos --> PNG, GIF, JPG</li>
+					<li>Vectoriales --> SVG</li>
+					<li>Animados --> APNG, GIF</li>
+					<li>Otros --> pdf, mng</li>
+				</ul>
+			</tr>
+			<tr>
+				<th>usemap;
+				<td>Usamos usemap en una imagen para mapear dicha imagen, es decir, dividirla en trozos mas pequeños y darle un sentido diferente a cada uno
+				La sintaxis sería así:
+<pre>< img usemap="#Prueba">   --> creación del mapa
+   < map name="Prueba">   --> nombre del mapa que vamos a usar
+      < area shpe="circle" coords="10,10,5" href="foto.jpg"> --> atributos del mapa</pre>
+      
+				Los atributos del mapa pueden ser
+				<ul>
+					<li>shape --> rect, circle, poly</li>
+					<li>coords --> coordenadas de las geometrías</li>
+					<ul>
+						<li>rectangulo(rect): Daremos los puntos de las cuatro esquinas siendo la primera x-izda superior, y-izq superior, x-dcha, y-inferior
+						<li>circulo(circle): Daremos el centro de x e y y el radio del mismo.
+						<li>poligono(poly): Daremos la medida de todos sus lados. x1,y1,x2,y2.....xn,yn
+					</ul>
+					<li>href --> Insertar la imagen</li>
+					<li>alt --> texto alternativo
+				</ul>
+			</tr>
+			<tr> 
+			<td colspan=2><h1>Tablas</h1></tr>
+			<tr>
+				<th>&lt;table&gt;&lt;/table&gt;
+				<td>Indica de que queremos insertar una tabla. 
+				Atributos de la tabla
+				<ul>
+					<li>Border --> solo puede tener dos valores "" o "1"
+					<li>rowspan --> Expansión en columna. Juntar dos columnas
+					<li>colspan --> Espansión en fila
+				</ul>
+			</tr>
+			<tr>
+				<th>&lt;tr&gt;&lt;/tr&gt;
+				<td>Indica que queremos insertar una fila en nuestra tabla. Esta etiqueta no es necesaria cerrarla si después tiene otro "tr"
+			</tr>
+			<tr>
+				<th>&lt;td&gt;&lt;/td&gt;
+				<td>Indica que queremos insertar una columna en nuestra tabla. Esta etiqueta no es necesaria cerrarla si después tiene otro "td" o "tr"
+			</tr>
+			<tr>
+				<th>&lt;th&gt;&lt;/th&gt;
+				<td>Títulos, cabeceras de la tabla
+			</tr>
+			<tr>
+				<th>&lt;thead&gt;&lt;/thead&gt;
+				<td>Encabezado de la tabla
+			</tr>
+			<tr>
+				<th>&lt;tbody&gt;&lt;/tbody&gt;
+				<td>Cuerpo de la tabla
+			</tr>
+			<tr>
+				<th>&lt;tfoot&gt;&lt;/tfoot&gt;
+				<td>Sumario de la tabla
+			</tr>
+			<tr>
+				<th>&lt;caption&gt;&lt;/caption&gt;
+				<td>Leyenda
+			</tr>
 		</table>
 	</body>
 </html>
